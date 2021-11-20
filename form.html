@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Brainster Labs | Full Stack Academy</title>
+  </head>
+  <style>
+  body{
+  background-color:#fcd232;
+  }
+  #logo-width{
+    width: 10%;
+  }
+
+  .hover-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hover-nav li {
+  float: left;
+}
+.nav-item{
+  color:black;
+}
+.hover-nav li a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 0;
+}
+
+li a:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+li a:hover:before,
+li a:focus:before {
+  transform: scale(1);
+}
+.width-dropdown{
+width: 95%;
+}
+
+     
+  </style>
+  <body>
+
+    <nav class="navbar navbar-expand-lg hover-nav navbar-light bg-warninig text-center">
+      <a href="index.html" id="logo-width"><img class="ml-4 w-25" src="images/Logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar_items"id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-auto">
+          <li class="nav-item">
+              <a class="nav-link text-dark" href="https://marketpreneurs.brainster.co"><b>Академија за маркетинг</b></a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="https://codepreneurs.brainster.co"><b>Aкадемија за програмирање</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><b>Академија за data science</b></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-dark" href="https://design.brainster.co"><b>Aкадемија за дизајн</b></a>
+            </li>
+        </ul>
+          <a href="form.html"><button class="btn btn-danger mr-4" type="button"><b>Вработи наш студент</b></button></a>
+      </div>
+
+    </nav>
+
+      <h1 class="p-5 text-dark text-sm-left text-md-center text-lg-center"><b>Вработи студенти</b></h1>
+      <div class="container">
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-12 col-md-6 col-lg-6 mb-3">
+            <label for="validationCustom01"><b>Име и Презиме</b></label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Вашето име и презиме" style="font-style:italic" required>
+            <div class="invalid-feedback">
+              * Полето Име и Презиме е задолжително
+           </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 mb-3">
+            <label for="validationCustom02"><b>Име на компанија</b></label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Име на Вашата компанија" style="font-style:italic" required>
+            <div class="invalid-feedback">
+              * Полето Име на компанија е задолжително
+           </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 mb-3">
+            <label for="exampleInputEmail1"><b>Контакт имејл</b></label>
+            <div class="input-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Контакт имејл на Вашата компанија" style="font-style:italic" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                 * Полето Контакт имејл е задолжително и мора да содржи @
+              </div>
+            </div>
+          </div>
+            <div class="col-12 col-md-6 col-lg-6 mb-3">
+          <label for="example-tel-input">Контакт телефон</label>
+          <input class="form-control" type="tel"  id="example-tel-input" placeholder="Контакт телефон на Вашата компанија" style="font-style:italic" required>
+          <div class="invalid-feedback">
+            * Полето Контакт телефон е задолжително
+         </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 mb-3">
+            <label for="sel1"><b>Тип на студенти</b></label>
+            <select class="form-control " id="sel1">
+              <option class="col-12 col-md-6 col-lg-6 mb-3"selected disabled>Изберете тип на студенти</option>
+              <option>Студенти од маркетинг</option>
+              <option>Студенти од програмирање</option>
+              <option>Студенти од data science</option>
+              <option>Студенти од дизајн</option>
+            </select>
+          </div>
+          <div class="submit col-12 col-md-6 col-lg-6">
+            <label for="submit"></label>
+            <button  class="cоl-6 btn btn-danger w-100 mt-2" type="submit"><b>ИСПРАТИ</b></button></div>
+      </form>
+      </div>
+      
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+      
+  </body>
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
